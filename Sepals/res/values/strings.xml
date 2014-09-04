@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">Σέπαλα</string>
-    <string name="hello_world">Γεια κόσμε!</string>
-
+    
+    <!-- Content descriptions -->
+	<string name="logo_desc">Το λογότυπο του καταστήματός μας</string>
 </resources>
