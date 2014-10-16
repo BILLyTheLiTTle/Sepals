@@ -18,6 +18,6 @@ public class LogoActivity extends Activity {
 	ViewTarget target = new ViewTarget(showcasedView);
 	ShowcaseView sv = ShowcaseView.insertShowcaseView(target, this, R.string.ok, R.string.ok);
 	sv.setScaleMultiplier(0);
-	sv.animateGesture(200, 500, 500, 500);
+	sv.animateGesture(500, 500, 200, 500, true);
     }
 }

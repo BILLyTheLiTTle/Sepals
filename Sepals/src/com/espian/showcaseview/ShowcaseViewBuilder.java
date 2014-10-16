@@ -49,8 +49,8 @@ public class ShowcaseViewBuilder {
         return this;
     }
 
-    public ShowcaseViewBuilder animateGesture(float offsetStartX, float offsetStartY, float offsetEndX, float offsetEndY) {
-        showcaseView.animateGesture(offsetStartX, offsetStartY, offsetEndX, offsetEndY);
+    public ShowcaseViewBuilder animateGesture(float offsetStartX, float offsetStartY, float offsetEndX, float offsetEndY, boolean repeat) {
+        showcaseView.animateGesture(offsetStartX, offsetStartY, offsetEndX, offsetEndY, repeat);
         return this;
     }
 
