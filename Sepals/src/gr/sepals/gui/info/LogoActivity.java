@@ -2,10 +2,10 @@ package gr.sepals.gui.info;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.espian.showcaseview.ShowcaseView;
-import com.espian.showcaseview.ShowcaseView.ConfigOptions;
-import com.espian.showcaseview.ShowcaseViewBuilder;
+import com.espian.showcaseview.targets.ViewTarget;
 
 public class LogoActivity extends Activity {
 
@@ -14,12 +14,10 @@ public class LogoActivity extends Activity {
 	super.onCreate(savedInstanceState);
 	setContentView(R.layout.activity_logo);
 	
-	ConfigOptions svConfig = new ShowcaseView.ConfigOptions();
-	svConfig.hideOnClickOutside = false;
-	svConfig.showcaseId = 1;
-	ShowcaseViewBuilder svBuilder = new ShowcaseViewBuilder(this);
-	svBuilder.setConfigOptions(svConfig);
-	svBuilder.animateGesture(0.0f, 0.0f, 200.0f, 200.0f);
-	svBuilder.build();
+	View showcasedView = findViewById(R.id.logo_imageView);
+	ViewTarget target = new ViewTarget(showcasedView);
+	ShowcaseView sv = ShowcaseView.insertShowcaseView(target, this, R.string.ok, R.string.ok);
+	sv.setScaleMultiplier(0);
+	sv.animateGesture(200, 500, 500, 500);
     }
 }
