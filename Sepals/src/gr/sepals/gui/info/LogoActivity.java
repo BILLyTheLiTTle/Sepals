@@ -21,7 +21,7 @@ public class LogoActivity extends Activity {
     }
     
     private void showHandGesture(){
-        ImageView logo = (ImageView) findViewById(R.id.logo_imageView);
+        View logo = (View) findViewById(R.id.circle_grey_4_view);
         final float startX = getResources().getDimension(R.dimen.hand_start_X);
         final float startY = getResources().getDimension(R.dimen.hand_start_Y);
         final float endX = getResources().getDimension(R.dimen.hand_end_X);

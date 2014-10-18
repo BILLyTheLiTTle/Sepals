@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <dimen name="circle_size">25dp</dimen>
+   <dimen name="circle_gap">30dp</dimen>
+   <dimen name="dots_bottom_margin">40dp</dimen>
+   <dimen name="hand_start_X">420dp</dimen>   
+   <dimen name="hand_start_Y">100dp</dimen>
+   <dimen name="hand_end_X">220dp</dimen>   
+   <dimen name="hand_end_Y">100dp</dimen>
+</resources>
