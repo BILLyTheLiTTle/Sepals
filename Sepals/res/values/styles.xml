@@ -1,5 +1,20 @@
 <resources>
 
+    <style name="IntroFont" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FFF6E0</item>
+    </style>
+    
+    <style name="IntroFont.Title" parent="@style/IntroFont">
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="IntroFont.Description" parent="@style/IntroFont">
+        <item name="android:textStyle">normal</item>
+    </style>
+    
+    <!-- ShowcaseView styles -->
     <style name="ShowcaseButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

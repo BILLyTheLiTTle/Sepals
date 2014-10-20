@@ -3,11 +3,12 @@
 
     <string name="app_name">Σέπαλα</string>
     <string name="ok">OK</string>
-    
+
     <!-- ShowcaseView descriptions -->
     <string name="slide_left_title">Σύρετε αριστερά</string>
     <string name="slide_left_description">Σύρετε προς τα αριστερά για να συνεχίσετε</string>
-    
+
     <!-- Content descriptions -->
-	<string name="logo_desc">Το λογότυπο του καταστήματός μας</string>
+    <string name="logo_desc">Το λογότυπο του καταστήματός μας</string>
+
 </resources>
