@@ -9,26 +9,26 @@
         android:id="@+id/logo_actionbar_imageview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="@dimen/custom_actionbar_icon_left_margin"
         android:adjustViewBounds="true"
-        android:maxHeight="70dp"
-        android:maxWidth="70dp"
+        android:maxWidth="@dimen/custom_actionbar_icon_width"
+        android:maxHeight="@dimen/custom_actionbar_icon_height"
         android:src="@drawable/logo" />
 
     <View
         android:id="@+id/actionbar_divisor"
         android:layout_width="fill_parent"
-        android:layout_height="2dp"
+        android:layout_height="@dimen/custom_actionbar_divisor_height"
         android:layout_below="@+id/logo_actionbar_imageview"
-        android:background="#696AB0" />
+        android:background="@color/purple_actionbar_divisor" />
 
     <TextView
         android:id="@+id/intro_products_title_textview"
         style="@style/IntroFont.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/custom_actionbar_bottom_margin"
         android:layout_below="@+id/logo_actionbar_imageview"
-        android:layout_marginTop="10dp"
         android:text="@string/intro_products_title" />
 
     <TextView

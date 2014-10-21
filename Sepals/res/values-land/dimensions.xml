@@ -8,5 +8,9 @@
    <dimen name="hand_end_X">220dp</dimen>
    <dimen name="hand_end_Y">100dp</dimen>
    
-   <dimen name="custom_actionbar_icon_left_margin">25dp</dimen>
+   <dimen name="custom_actionbar_icon_width">70dp</dimen>
+   <dimen name="custom_actionbar_icon_height">70dp</dimen>
+   <dimen name="custom_actionbar_icon_left_margin">10dp</dimen>
+   <dimen name="custom_actionbar_divisor_height">2dp</dimen>
+   <dimen name="custom_actionbar_bottom_margin">10dp</dimen>
 </resources>
