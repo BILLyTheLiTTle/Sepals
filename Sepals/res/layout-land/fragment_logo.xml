@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/logo_fragment_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
@@ -11,8 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/logo"
-        android:contentDescription="@string/logo_desc" />
+        android:contentDescription="@string/logo_desc"
+        android:src="@drawable/logo" />
 
     <View
         android:id="@+id/circle_blue_view"
@@ -28,44 +29,44 @@
         android:id="@+id/circle_grey_0_view"
         android:layout_width="@dimen/circle_size"
         android:layout_height="@dimen/circle_size"
-        android:layout_toRightOf="@+id/circle_blue_view"
-        android:layout_toEndOf="@+id/circle_blue_view"
+        android:layout_alignTop="@+id/circle_blue_view"
         android:layout_marginLeft="@dimen/circle_gap"
         android:layout_marginStart="@dimen/circle_gap"
-        android:layout_alignTop="@+id/circle_blue_view"
+        android:layout_toEndOf="@+id/circle_blue_view"
+        android:layout_toRightOf="@+id/circle_blue_view"
         android:background="@drawable/circle_grey" />
 
     <View
         android:id="@+id/circle_grey_1_view"
         android:layout_width="@dimen/circle_size"
         android:layout_height="@dimen/circle_size"
-        android:layout_toRightOf="@+id/circle_grey_0_view"
-        android:layout_toEndOf="@+id/circle_grey_0_view"
+        android:layout_alignTop="@+id/circle_blue_view"
         android:layout_marginLeft="@dimen/circle_gap"
         android:layout_marginStart="@dimen/circle_gap"
-        android:layout_alignTop="@+id/circle_blue_view"
+        android:layout_toEndOf="@+id/circle_grey_0_view"
+        android:layout_toRightOf="@+id/circle_grey_0_view"
         android:background="@drawable/circle_grey" />
 
     <View
         android:id="@+id/circle_grey_2_view"
         android:layout_width="@dimen/circle_size"
         android:layout_height="@dimen/circle_size"
-        android:layout_toRightOf="@+id/circle_grey_1_view"
-        android:layout_toEndOf="@+id/circle_grey_1_view"
+        android:layout_alignTop="@+id/circle_blue_view"
         android:layout_marginLeft="@dimen/circle_gap"
         android:layout_marginStart="@dimen/circle_gap"
-        android:layout_alignTop="@+id/circle_blue_view"
+        android:layout_toEndOf="@+id/circle_grey_1_view"
+        android:layout_toRightOf="@+id/circle_grey_1_view"
         android:background="@drawable/circle_grey" />
 
     <View
         android:id="@+id/circle_grey_3_view"
         android:layout_width="@dimen/circle_size"
         android:layout_height="@dimen/circle_size"
-        android:layout_toRightOf="@+id/circle_grey_2_view"
-        android:layout_toEndOf="@+id/circle_grey_2_view"
+        android:layout_alignTop="@+id/circle_blue_view"
         android:layout_marginLeft="@dimen/circle_gap"
         android:layout_marginStart="@dimen/circle_gap"
-        android:layout_alignTop="@+id/circle_blue_view"
+        android:layout_toEndOf="@+id/circle_grey_2_view"
+        android:layout_toRightOf="@+id/circle_grey_2_view"
         android:background="@drawable/circle_grey" />
 
     <View
