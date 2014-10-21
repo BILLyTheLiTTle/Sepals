@@ -15,67 +15,54 @@
         android:contentDescription="@string/logo_desc"
         android:src="@drawable/logo" />
 
-    <View
-        android:id="@+id/circle_blue_view"
-        android:layout_width="@dimen/circle_size"
-        android:layout_height="@dimen/circle_size"
-        android:layout_alignLeft="@+id/logo_imageView"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/logo_imageView"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/dots_bottom_margin"
-        android:background="@drawable/circle_blue" />
+        android:orientation="horizontal" >
 
-    <View
-        android:id="@+id/circle_grey_0_view"
-        android:layout_width="@dimen/circle_size"
-        android:layout_height="@dimen/circle_size"
-        android:layout_alignTop="@+id/circle_blue_view"
-        android:layout_marginLeft="@dimen/circle_gap"
-        android:layout_marginStart="@dimen/circle_gap"
-        android:layout_toEndOf="@+id/circle_blue_view"
-        android:layout_toRightOf="@+id/circle_blue_view"
-        android:background="@drawable/circle_grey" />
+        <View
+            android:id="@+id/circle_blue_0_view"
+            android:layout_width="@dimen/circle_size"
+            android:layout_height="@dimen/circle_size"
+            android:background="@drawable/circle_blue" />
 
-    <View
-        android:id="@+id/circle_grey_1_view"
-        android:layout_width="@dimen/circle_size"
-        android:layout_height="@dimen/circle_size"
-        android:layout_alignTop="@+id/circle_blue_view"
-        android:layout_marginLeft="@dimen/circle_gap"
-        android:layout_marginStart="@dimen/circle_gap"
-        android:layout_toEndOf="@+id/circle_grey_0_view"
-        android:layout_toRightOf="@+id/circle_grey_0_view"
-        android:background="@drawable/circle_grey" />
+        <View
+            android:id="@+id/circle_grey_0_view"
+            android:layout_width="@dimen/circle_size"
+            android:layout_height="@dimen/circle_size"
+            android:layout_marginLeft="@dimen/circle_gap"
+            android:background="@drawable/circle_grey" />
 
-    <View
-        android:id="@+id/circle_grey_2_view"
-        android:layout_width="@dimen/circle_size"
-        android:layout_height="@dimen/circle_size"
-        android:layout_alignTop="@+id/circle_blue_view"
-        android:layout_marginLeft="@dimen/circle_gap"
-        android:layout_marginStart="@dimen/circle_gap"
-        android:layout_toEndOf="@+id/circle_grey_1_view"
-        android:layout_toRightOf="@+id/circle_grey_1_view"
-        android:background="@drawable/circle_grey" />
+        <View
+            android:id="@+id/circle_grey_1_view"
+            android:layout_width="@dimen/circle_size"
+            android:layout_height="@dimen/circle_size"
+            android:layout_marginLeft="@dimen/circle_gap"
+            android:background="@drawable/circle_grey" />
 
-    <View
-        android:id="@+id/circle_grey_3_view"
-        android:layout_width="@dimen/circle_size"
-        android:layout_height="@dimen/circle_size"
-        android:layout_alignTop="@+id/circle_blue_view"
-        android:layout_marginLeft="@dimen/circle_gap"
-        android:layout_marginStart="@dimen/circle_gap"
-        android:layout_toEndOf="@+id/circle_grey_2_view"
-        android:layout_toRightOf="@+id/circle_grey_2_view"
-        android:background="@drawable/circle_grey" />
+        <View
+            android:id="@+id/circle_grey_2_view"
+            android:layout_width="@dimen/circle_size"
+            android:layout_height="@dimen/circle_size"
+            android:layout_marginLeft="@dimen/circle_gap"
+            android:background="@drawable/circle_grey" />
 
-    <View
-        android:id="@+id/circle_grey_4_view"
-        android:layout_width="@dimen/circle_size"
-        android:layout_height="@dimen/circle_size"
-        android:layout_alignEnd="@+id/logo_imageView"
-        android:layout_alignRight="@+id/logo_imageView"
-        android:layout_alignTop="@+id/circle_blue_view"
-        android:background="@drawable/circle_grey" />
+        <View
+            android:id="@+id/circle_grey_3_view"
+            android:layout_width="@dimen/circle_size"
+            android:layout_height="@dimen/circle_size"
+            android:layout_marginLeft="@dimen/circle_gap"
+            android:background="@drawable/circle_grey" />
+
+        <View
+            android:id="@+id/circle_grey_4_view"
+            android:layout_width="@dimen/circle_size"
+            android:layout_height="@dimen/circle_size"
+            android:layout_marginLeft="@dimen/circle_gap"
+            android:background="@drawable/circle_grey" />
+    </LinearLayout>
 
 </RelativeLayout>

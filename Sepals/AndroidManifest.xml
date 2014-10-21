@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".IntroProductsFragment"
+            android:name=".ProductsSlidePageFragment"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
     </application>

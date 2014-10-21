@@ -172,7 +172,7 @@ public class ShowcaseView extends RelativeLayout implements
             }
             mEndButton.setLayoutParams(lps);
             mEndButton.setText(buttonText != null ? buttonText : getResources()
-                    .getString(R.string.ok));
+                    .getString(R.string.got_it));
             if (!hasCustomClickListener) {
                 mEndButton.setOnClickListener(this);
             }
