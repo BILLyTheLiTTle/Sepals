@@ -12,7 +12,7 @@ public class NetworkSlidePageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.fragment_intro_network, container, false);
+                R.layout.fragment_info_network, container, false);
 
         return rootView;
     }

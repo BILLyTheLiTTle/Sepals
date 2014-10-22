@@ -12,7 +12,7 @@ public class ProductsSlidePageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.fragment_intro_products, container, false);
+                R.layout.fragment_info_products, container, false);
 
         return rootView;
     }

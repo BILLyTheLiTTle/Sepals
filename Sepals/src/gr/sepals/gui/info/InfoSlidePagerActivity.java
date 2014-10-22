@@ -16,7 +16,7 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Display;
 
-public class IntroSlidePagerActivity extends FragmentActivity {
+public class InfoSlidePagerActivity extends FragmentActivity {
 
     /**
      * The pager widget, which handles animation and allows swiping horizontally
@@ -32,7 +32,7 @@ public class IntroSlidePagerActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
-	setContentView(R.layout.intro_slide_activity);
+	setContentView(R.layout.info_slide_activity);
 
 	// Instantiate a ViewPager and a PagerAdapter.
 	mPager = (ViewPager) findViewById(R.id.pager);

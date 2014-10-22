@@ -13,7 +13,7 @@ public class LogoSlidePageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.fragment_logo, container, false);
+                R.layout.fragment_info_logo, container, false);
         
         return rootView;
     }

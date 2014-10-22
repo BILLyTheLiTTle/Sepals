@@ -12,7 +12,7 @@ public class OrderSlidePageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.fragment_intro_order, container, false);
+                R.layout.fragment_info_order, container, false);
 
         return rootView;
     }
