@@ -92,7 +92,7 @@ public class IntroSlidePagerActivity extends FragmentActivity {
 	    fragments = new ArrayList<Fragment>();
 	    fragments.add(new LogoSlidePageFragment());
 	    fragments.add(new ProductsSlidePageFragment());
-	    fragments.add(new LogoSlidePageFragment());
+	    fragments.add(new NetworkSlidePageFragment());
 	    fragments.add(new LogoSlidePageFragment());
 	    fragments.add(new LogoSlidePageFragment());
 	    fragments.add(new LogoSlidePageFragment());
