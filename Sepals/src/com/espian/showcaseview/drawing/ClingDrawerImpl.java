@@ -11,7 +11,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.Log;
 
-import gr.sepals.gui.info.R;
+import gr.sepals.eshop.R;
 
 /**
  * Created by curraa01 on 13/10/2013.

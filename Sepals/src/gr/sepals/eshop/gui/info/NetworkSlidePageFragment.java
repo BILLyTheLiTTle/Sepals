@@ -1,5 +1,4 @@
-
-package gr.sepals.gui.info;
+package gr.sepals.eshop.gui.info;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,14 +6,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class LogoSlidePageFragment extends Fragment {    
-    
+import gr.sepals.eshop.R;
+
+public class NetworkSlidePageFragment extends Fragment {
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.fragment_info_logo, container, false);
-        
+                R.layout.fragment_info_network, container, false);
+
         return rootView;
     }
 }

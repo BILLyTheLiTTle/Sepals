@@ -1,4 +1,4 @@
-package gr.sepals.gui.info;
+package gr.sepals.eshop.gui.info;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,13 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class OrderSlidePageFragment extends Fragment {
+import gr.sepals.eshop.R;
+
+public class ProductsSlidePageFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.fragment_info_order, container, false);
+                R.layout.fragment_info_products, container, false);
 
         return rootView;
     }

@@ -38,7 +38,7 @@ import com.espian.showcaseview.targets.Target;
 import com.espian.showcaseview.utils.Calculator;
 import com.espian.showcaseview.utils.PointAnimator;
 //import com.github.espiandev.showcaseview.R;
-import gr.sepals.gui.info.R;
+import gr.sepals.eshop.R;
 import com.nineoldandroids.animation.Animator;
 
 import static com.espian.showcaseview.anim.AnimationUtils.AnimationEndListener;

@@ -1,10 +1,12 @@
-package gr.sepals.gui.info;
+package gr.sepals.eshop.gui.info;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.espian.showcaseview.ShowcaseView;
 import com.espian.showcaseview.ShowcaseView.ConfigOptions;
+
+import gr.sepals.eshop.R;
 
 import android.graphics.Point;
 import android.os.Bundle;
