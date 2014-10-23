@@ -1,20 +1,22 @@
-package gr.sepals.eshop.gui.info;
 
-import gr.sepals.eshop.R;
+package gr.sepals.eshop.info.gui;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ThanksSlidePageFragment extends Fragment {
+import gr.sepals.eshop.R;
 
+public class LogoSlidePageFragment extends Fragment {    
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.fragment_info_thanks, container, false);
-
+                R.layout.fragment_info_logo, container, false);
+        
         return rootView;
     }
 }

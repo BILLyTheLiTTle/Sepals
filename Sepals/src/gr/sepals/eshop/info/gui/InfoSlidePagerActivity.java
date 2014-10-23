@@ -1,4 +1,4 @@
-package gr.sepals.eshop.gui.info;
+package gr.sepals.eshop.info.gui;
 
 import java.util.ArrayList;
 import java.util.List;
