@@ -5,6 +5,7 @@
    <dimen name="hand_start_Y">100dp</dimen>
    <dimen name="hand_end_X">220dp</dimen>
    <dimen name="hand_end_Y">100dp</dimen>
-      
+   
+   <dimen name="hide_info_checkbox_bottom_margin">30dp</dimen>   
    <dimen name="memory_radiogroup_bottom_margin">40dp</dimen>
 </resources>

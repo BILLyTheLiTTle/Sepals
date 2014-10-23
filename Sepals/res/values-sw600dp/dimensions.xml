@@ -13,5 +13,4 @@
    <dimen name="custom_actionbar_bottom_margin">20dp</dimen>
    <dimen name="title_description_margin">10dp</dimen>
    
-   <dimen name="memory_radiogroup_bottom_margin">60dp</dimen>
 </resources>

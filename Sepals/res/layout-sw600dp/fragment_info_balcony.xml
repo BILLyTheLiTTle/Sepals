@@ -89,6 +89,13 @@
             android:layout_height="@dimen/circle_size"
             android:layout_marginLeft="@dimen/circle_gap"
             android:background="@drawable/circle_grey" />
+
+        <View
+            android:id="@+id/circle_grey_1_view"
+            android:layout_width="@dimen/circle_size"
+            android:layout_height="@dimen/circle_size"
+            android:layout_marginLeft="@dimen/circle_gap"
+            android:background="@drawable/circle_grey" />
     </LinearLayout>
 
 </RelativeLayout>
