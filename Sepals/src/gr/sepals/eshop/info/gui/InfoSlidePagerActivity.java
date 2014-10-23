@@ -98,6 +98,7 @@ public class InfoSlidePagerActivity extends FragmentActivity {
 	    fragments.add(new OrderSlidePageFragment());
 	    fragments.add(new BalconySlidePageFragment());
 	    fragments.add(new ThanksSlidePageFragment());
+	    fragments.add(new SyncSlidePageFragment());
 	}
 
 	@Override

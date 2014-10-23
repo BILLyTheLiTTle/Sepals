@@ -13,4 +13,6 @@
    <dimen name="custom_actionbar_icon_left_margin">10dp</dimen>
    <dimen name="custom_actionbar_divisor_height">2dp</dimen>
    <dimen name="custom_actionbar_bottom_margin">10dp</dimen>
+   
+   <dimen name="memory_radiogroup_bottom_margin">60dp</dimen>
 </resources>
