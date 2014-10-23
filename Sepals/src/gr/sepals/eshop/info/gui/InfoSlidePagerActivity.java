@@ -4,6 +4,7 @@ package gr.sepals.eshop.info.gui;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.espian.showcaseview.OnShowcaseEventListener;
 import com.espian.showcaseview.ShowcaseView;
 import com.espian.showcaseview.ShowcaseView.ConfigOptions;
 
@@ -20,6 +21,8 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Display;
+import android.view.MotionEvent;
+import android.view.View;
 
 public class InfoSlidePagerActivity extends FragmentActivity {
 
@@ -61,14 +64,15 @@ public class InfoSlidePagerActivity extends FragmentActivity {
         }
     }
 
+    @SuppressWarnings("deprecation")
     private void showHandGesture() {
         final float startX = getResources().getDimension(R.dimen.hand_start_X);
         final float startY = getResources().getDimension(R.dimen.hand_start_Y);
         final float endX = getResources().getDimension(R.dimen.hand_end_X);
         final float endY = getResources().getDimension(R.dimen.hand_end_Y);
+        Display display = getWindowManager().getDefaultDisplay();
         ConfigOptions co = new ShowcaseView.ConfigOptions();
         co.hideOnClickOutside = true;
-        Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
         int width = size.x;
@@ -77,6 +81,26 @@ public class InfoSlidePagerActivity extends FragmentActivity {
                 R.string.slide_left_title, R.string.slide_left_description, co);
         sv.setScaleMultiplier(0);
         sv.animateGesture(startX, startY, endX, endY, true);
+        sv.setOnShowcaseEventListener(new OnShowcaseEventListener() {
+            
+            @Override
+            public void onShowcaseViewShow(ShowcaseView showcaseView) {
+                // TODO Auto-generated method stub
+                
+            }
+            
+            @Override
+            public void onShowcaseViewHide(ShowcaseView showcaseView) {
+                // TODO Auto-generated method stub
+                
+            }
+            
+            @Override
+            public void onShowcaseViewDidHide(ShowcaseView showcaseView) {
+                // TODO Auto-generated method stub
+                Settings.setBoolean(getApplicationContext(), InternalDatabaseKeys.SHOW_SLIDE_HAND, false);
+            }
+        });
     }
 
     /**
@@ -116,7 +140,6 @@ public class InfoSlidePagerActivity extends FragmentActivity {
                     && Settings.getBoolean(getApplicationContext(),
                             InternalDatabaseKeys.SHOW_SLIDE_HAND, true)) {
                 showHandGesture();
-                Settings.setBoolean(getApplicationContext(), InternalDatabaseKeys.SHOW_SLIDE_HAND, false);
             }
             return current;
         }
