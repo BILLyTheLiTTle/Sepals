@@ -60,8 +60,8 @@
             android:id="@+id/embedded_memory_radiobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="checkAvailableMemory"
-            android:text="@string/embedded_memory" />
+            android:text="@string/embedded_memory"
+            android:onClick="checkAvailableMemory" />
 
         <RadioButton
             android:id="@+id/external_memory_radiobutton"
@@ -77,7 +77,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:text="@string/exit" />
+        android:text="@string/exit"
+        android:onClick="exit" />
 
     <Button
         android:id="@+id/sync_button"
