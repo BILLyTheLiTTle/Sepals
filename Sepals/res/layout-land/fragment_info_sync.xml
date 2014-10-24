@@ -22,30 +22,37 @@
         android:layout_below="@+id/logo_actionbar_imageview"
         android:background="@color/purple_actionbar_divisor" />
 
-    <TextView
-        android:id="@+id/intro_sync_description_textview"
-        style="@style/IntroFont.Description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ScrollView
+        android:id="@+id/sync_text_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sync_text_height"
         android:layout_below="@+id/logo_actionbar_imageview"
-        android:layout_marginTop="@dimen/custom_actionbar_bottom_margin"
-        android:text="@string/intro_sync_description" />
+        android:layout_marginTop="@dimen/custom_actionbar_bottom_margin" >
+
+        <TextView
+            android:id="@+id/intro_sync_description_textview"
+            style="@style/IntroFont.Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:text="@string/intro_sync_description" />
+    </ScrollView>
 
     <RadioGroup
         android:id="@+id/memory_radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/exit_button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/exit_button"
         android:layout_marginBottom="@dimen/memory_radiogroup_bottom_margin" >
 
         <RadioButton
             android:id="@+id/internal_memory_radiobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/internal_memory"
-            android:onClick="checkAvailableMemory" />
+            android:onClick="checkAvailableMemory"
+            android:text="@string/internal_memory" />
 
         <RadioButton
             android:id="@+id/embedded_memory_radiobutton"
@@ -58,8 +65,8 @@
             android:id="@+id/external_memory_radiobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/external_memory"
-            android:onClick="checkAvailableMemory" />
+            android:onClick="checkAvailableMemory"
+            android:text="@string/external_memory" />
     </RadioGroup>
 
     <Button
