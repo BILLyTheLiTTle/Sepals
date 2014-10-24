@@ -8,76 +8,41 @@ import android.database.sqlite.SQLiteDatabase;
 
 import gr.sepals.eshop.persistence.InternalDatabaseHelper;
 
-public class Settings {
-    private SQLiteDatabase mDatabase;
-    private Context mContext;
-
+public class Settings{
+    
     public static void setString(Context context, String name, String value) {
-        ContentValues cv = new ContentValues();
-        cv.put("key", name);
-        cv.put("value", value);
-        SQLiteDatabase db = new InternalDatabaseHelper(context).getWritableDatabase();
-        try {
-            db.replace(InternalDatabaseHelper.TABLE_SETTINGS, null, cv);
-        } finally {
-            db.close();
-        }
+	DatabaseHandler.setString(context, InternalDatabaseHelper.TABLE_SETTINGS, name, value);
     }
 
     public static String getString(Context context, String name) {
-        return getString(context, name, null);
+        return DatabaseHandler.getString(context, InternalDatabaseHelper.TABLE_SETTINGS, name, null);
     }
 
     public static String getString(Context context, String name, String defaultValue) {
-        SQLiteDatabase db = new InternalDatabaseHelper(context).getReadableDatabase();
-        Cursor cursor = db.query(InternalDatabaseHelper.TABLE_SETTINGS, new String[] {
-            "value"
-        }, "key='" + name + "'", null, null, null, null);
-        try {
-            if (cursor.moveToNext())
-                return cursor.getString(0);
-        } finally {
-            cursor.close();
-            db.close();
-        }
-        return defaultValue;
+        return DatabaseHandler.getString(context, InternalDatabaseHelper.TABLE_SETTINGS, name, defaultValue);
     }
 
     public static void setInt(Context context, String name, int value) {
-        setString(context, name, ((Integer) value).toString());
+        DatabaseHandler.setString(context, InternalDatabaseHelper.TABLE_SETTINGS, name, ((Integer) value).toString());
     }
 
     public static int getInt(Context context, String name, int defaultValue) {
-        try {
-            return Integer.parseInt(getString(context, name, null));
-        } catch (Exception ex) {
-            return defaultValue;
-        }
+        return DatabaseHandler.getInt(context, InternalDatabaseHelper.TABLE_SETTINGS, name, defaultValue);
     }
 
     public static void setLong(Context context, String name, long value) {
-        setString(context, name, ((Long) value).toString());
+	DatabaseHandler.setLong(context, InternalDatabaseHelper.TABLE_SETTINGS, name, value);
     }
 
     public static long getLong(Context context, String name, long defaultValue) {
-        try {
-            return Long.parseLong(getString(context, name, null));
-        } catch (Exception ex) {
-            return defaultValue;
-        }
+        return DatabaseHandler.getLong(context, InternalDatabaseHelper.TABLE_SETTINGS, name, defaultValue);
     }
 
     public static void setBoolean(Context context, String name, boolean value) {
-        setString(context, name, ((Boolean) value).toString());
+	DatabaseHandler.setBoolean(context, InternalDatabaseHelper.TABLE_SETTINGS, name, value);
     }
 
     public static boolean getBoolean(Context context, String name, boolean defaultValue) {
-        try {
-            return Boolean.parseBoolean(getString(context, name,
-                    ((Boolean) defaultValue).toString()));
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return defaultValue;
-        }
+        return DatabaseHandler.getBoolean(context, InternalDatabaseHelper.TABLE_SETTINGS, name, defaultValue);
     }
 }
