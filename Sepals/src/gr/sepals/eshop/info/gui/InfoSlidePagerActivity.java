@@ -20,9 +20,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.Display;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -133,8 +131,8 @@ public class InfoSlidePagerActivity extends FragmentActivity {
                     Toast.LENGTH_LONG).show();
         }
     }
-    
-    public void exit(View view){
+
+    public void exit(View view) {
         finish();
     }
 

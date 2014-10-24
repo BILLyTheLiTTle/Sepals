@@ -1,3 +1,4 @@
+
 package gr.sepals.eshop.util.db;
 
 import gr.sepals.eshop.persistence.InternalDatabaseHelper;
@@ -24,10 +25,11 @@ public class InternalDatabaseHandler {
         return getString(context, database, name, null);
     }
 
-    public static String getString(Context context, String database, String name, String defaultValue) {
+    public static String getString(Context context, String database, String name,
+            String defaultValue) {
         SQLiteDatabase db = new InternalDatabaseHelper(context).getReadableDatabase();
         Cursor cursor = db.query(database, new String[] {
-            "value"
+                "value"
         }, "key='" + name + "'", null, null, null, null);
         try {
             if (cursor.moveToNext())
@@ -67,7 +69,8 @@ public class InternalDatabaseHandler {
         setString(context, database, name, ((Boolean) value).toString());
     }
 
-    public static boolean getBoolean(Context context, String database, String name, boolean defaultValue) {
+    public static boolean getBoolean(Context context, String database, String name,
+            boolean defaultValue) {
         try {
             return Boolean.parseBoolean(getString(context, database, name,
                     ((Boolean) defaultValue).toString()));

@@ -1,3 +1,4 @@
+
 package gr.sepals.eshop.persistence;
 
 import android.content.Context;
@@ -10,20 +11,21 @@ public class InternalDatabaseHelper extends SQLiteOpenHelper {
     public static final String TABLE_SETTINGS = "settings";
     private static final String TABLE_PERSONAL_DATA = "personal_data";
     private static final int DB_VERSION = 1;
-    
-    public InternalDatabaseHelper(Context ctx){
+
+    public InternalDatabaseHelper(Context ctx) {
         super(ctx, DB_NAME, null, DB_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         // TODO Auto-generated method stub
-        db.execSQL("create table "+TABLE_SETTINGS+" (key text primary key not null, value text)");
+        db.execSQL("create table " + TABLE_SETTINGS
+                + " (key text primary key not null, value text)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // TODO Auto-generated method stub
-        //Do nothing at the moment
+        // Do nothing at the moment
     }
 }
