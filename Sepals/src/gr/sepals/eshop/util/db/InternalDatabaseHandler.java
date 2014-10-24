@@ -1,4 +1,4 @@
-package gr.sepals.eshop.util;
+package gr.sepals.eshop.util.db;
 
 import gr.sepals.eshop.persistence.InternalDatabaseHelper;
 import android.content.ContentValues;
@@ -6,7 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-public class DatabaseHandler {
+public class InternalDatabaseHandler {
 
     public static void setString(Context context, String database, String name, String value) {
         ContentValues cv = new ContentValues();

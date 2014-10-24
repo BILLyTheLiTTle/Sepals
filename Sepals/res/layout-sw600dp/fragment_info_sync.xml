@@ -53,13 +53,22 @@
             android:id="@+id/internal_memory_radiobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/internal_memory" />
+            android:text="@string/internal_memory"
+            android:onClick="checkAvailableMemory" />
 
         <RadioButton
-            android:id="@+id/external_memory_radioButton"
+            android:id="@+id/embedded_memory_radiobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/external_memory" />
+            android:onClick="checkAvailableMemory"
+            android:text="@string/embedded_memory" />
+
+        <RadioButton
+            android:id="@+id/external_memory_radiobutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/external_memory"
+            android:onClick="checkAvailableMemory" />
     </RadioGroup>
 
     <Button
