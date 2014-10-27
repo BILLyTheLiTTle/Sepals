@@ -22,6 +22,8 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Display;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -49,6 +51,12 @@ public class InfoSlidePagerActivity extends FragmentActivity {
                 getSupportFragmentManager());
         mPagerAdapter.init();
         mPager.setAdapter(mPagerAdapter);
+
+        // hide initial info
+        if (Settings.getBoolean(this, InternalDatabaseKeys.HIDE_INTRO_INFO, false)) {
+            mPager.setCurrentItem(6);
+        }
+
     }
 
     @Override
@@ -174,6 +182,22 @@ public class InfoSlidePagerActivity extends FragmentActivity {
                             InternalDatabaseKeys.SHOW_SLIDE_HAND, true)) {
                 showHandGesture();
             }
+            else if (pager.getCurrentItem() == 5) {
+                // hide or show the intro info
+                CheckBox hideInfo = (CheckBox) findViewById(R.id.hide_info_checkBox);
+                hideInfo.setChecked(Settings.getBoolean(getApplicationContext(),
+                        InternalDatabaseKeys.HIDE_INTRO_INFO, false));
+                hideInfo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+                    @Override
+                    public void onCheckedChanged(CompoundButton buttonView,
+                            boolean hideInfo) {
+                        Settings.setBoolean(getApplicationContext(),
+                                InternalDatabaseKeys.HIDE_INTRO_INFO, hideInfo);
+                    }
+                });
+            }
+
             return current;
         }
 
