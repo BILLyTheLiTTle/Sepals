@@ -2,7 +2,6 @@
 package gr.sepals.eshop.util.device;
 
 import java.io.File;
-import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 import android.content.Context;
