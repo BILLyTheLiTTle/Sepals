@@ -51,22 +51,19 @@
             android:id="@+id/internal_memory_radiobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/internal_memory"
-            android:onClick="checkAvailableMemory" />
+            android:text="@string/internal_memory" />
 
         <RadioButton
             android:id="@+id/embedded_memory_radiobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/embedded_memory"
-            android:onClick="checkAvailableMemory" />
+            android:text="@string/embedded_memory" />
 
         <RadioButton
             android:id="@+id/removable_memory_radiobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/removable_memory"
-            android:onClick="checkAvailableMemory" />
+            android:text="@string/removable_memory" />
     </RadioGroup>
 
     <Button
@@ -75,8 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:text="@string/exit"
-        android:onClick="exit" />
+        android:text="@string/exit" />
 
     <Button
         android:id="@+id/sync_button"
