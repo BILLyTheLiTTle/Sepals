@@ -55,11 +55,11 @@
             android:onClick="checkAvailableMemory" />
 
         <RadioButton
-            android:id="@+id/external_memory_radiobutton"
+            android:id="@+id/removable_memory_radiobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkAvailableMemory"
-            android:text="@string/external_memory" />
+            android:text="@string/removable_memory" />
     </RadioGroup>
 
     <Button

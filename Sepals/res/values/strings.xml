@@ -16,10 +16,10 @@
     <string name="intro_sync_description">Η συσκευή σας θα συγχρονιστεί με το κεντρικό σύστημα. Προτείνεται να είστε συνδεδεμένοι στο διαδίκτυο μέσω Wi-Fi. Το μέγεθος των δεδομένων που θα συγχρονιστούν ανέρχεται στα 80MB.\n\nΕπιλέξτε το μέρος όπου θα αποθηκευτούν τα δεδομένα.</string>
     <string name="internal_memory">Εσωτερική μνήμη συσκευής</string>
     <string name="embedded_memory">Ενσωματωμένη κάρτα μνήμης συσκευής</string>
-    <string name="external_memory">Αποσπώμενη κάρτα μνήμης συσκευής</string>
+    <string name="removable_memory">Αποσπώμενη κάρτα μνήμης συσκευής</string>
     <string name="free_internal_memory">Η εσωτερική μνήμη της συσκευής έχει %1$s GB, ελεύθερα!</string>
     <string name="free_embedded_memory">Η ενσωματωμένη κάρτα μνήμης της συσκευής έχει %1$s GB, ελεύθερα!</string>
-    <string name="free_external_memory">Η αποσπώμενη κάρτα μνήμης της συσκευής έχει %1$s GB, ελεύθερα!</string>
+    <string name="free_removable_memory">Η αποσπώμενη κάρτα μνήμης της συσκευής έχει %1$s GB, ελεύθερα!</string>
     <string name="exit">Έξοδος</string>
     <string name="sync">Συγχρονισμός</string>
 

@@ -1,19 +1,19 @@
 
 package gr.sepals.eshop.util.db;
 
-import gr.sepals.eshop.persistence.InternalDatabaseHelper;
+import gr.sepals.eshop.persistence.InternalDatabaseHandler;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-public class InternalDatabaseHandler {
+public class InternalDatabaseTableHandler {
 
     public static void setString(Context context, String database, String name, String value) {
         ContentValues cv = new ContentValues();
         cv.put("key", name);
         cv.put("value", value);
-        SQLiteDatabase db = new InternalDatabaseHelper(context).getWritableDatabase();
+        SQLiteDatabase db = new InternalDatabaseHandler(context).getWritableDatabase();
         try {
             db.replace(database, null, cv);
         } finally {
@@ -27,7 +27,7 @@ public class InternalDatabaseHandler {
 
     public static String getString(Context context, String database, String name,
             String defaultValue) {
-        SQLiteDatabase db = new InternalDatabaseHelper(context).getReadableDatabase();
+        SQLiteDatabase db = new InternalDatabaseHandler(context).getReadableDatabase();
         Cursor cursor = db.query(database, new String[] {
                 "value"
         }, "key='" + name + "'", null, null, null, null);

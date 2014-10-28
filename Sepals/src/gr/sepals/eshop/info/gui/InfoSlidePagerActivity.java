@@ -10,6 +10,7 @@ import com.espian.showcaseview.ShowcaseView.ConfigOptions;
 
 import gr.sepals.eshop.R;
 import gr.sepals.eshop.persistence.InternalDatabaseKeys;
+import gr.sepals.eshop.persistence.InternalDatabasePredefinedValues;
 import gr.sepals.eshop.util.db.Settings;
 import gr.sepals.eshop.util.device.DeviceOptionsHandler;
 
@@ -20,11 +21,14 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Display;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class InfoSlidePagerActivity extends FragmentActivity {
@@ -113,6 +117,43 @@ public class InfoSlidePagerActivity extends FragmentActivity {
         });
     }
 
+    public void updateFragment(int position) {
+        if (position == 5) {
+            // hide or show the intro info
+            CheckBox hideInfo = (CheckBox) findViewById(R.id.hide_info_checkBox);
+            hideInfo.setChecked(Settings.getBoolean(getApplicationContext(),
+                    InternalDatabaseKeys.HIDE_INTRO_INFO, false));
+            hideInfo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView,
+                        boolean hideInfo) {
+                    Settings.setBoolean(getApplicationContext(),
+                            InternalDatabaseKeys.HIDE_INTRO_INFO, hideInfo);
+                }
+            });
+        }
+        else if (position == 6) {
+            RadioGroup memoryOption = (RadioGroup) findViewById(R.id.memory_radioGroup);
+            Button sync = (Button) findViewById(R.id.sync_button);
+            // remember storage option
+            int checked = memoryOption.getCheckedRadioButtonId();
+            if(checked == R.id.internal_memory_radiobutton){
+            Settings.setString(this, InternalDatabaseKeys.PRODUCTS_DB_STORAGE_OPTION,
+                    InternalDatabasePredefinedValues.PRODUCTS_DB_INTERNAL_STORAGE);
+            }
+            else if(checked == R.id.embedded_memory_radiobutton){
+                Settings.setString(this, InternalDatabaseKeys.PRODUCTS_DB_STORAGE_OPTION,
+                        InternalDatabasePredefinedValues.PRODUCTS_DB_EMBEDDED_STORAGE);
+                }
+            else if(checked == R.id.removable_memory_radiobutton){
+                Settings.setString(this, InternalDatabaseKeys.PRODUCTS_DB_STORAGE_OPTION,
+                        InternalDatabasePredefinedValues.PRODUCTS_DB_REMOVABLE_STORAGE);
+            }
+            // start the sync
+        }
+    }
+
     public void checkAvailableMemory(View view) {
         RadioButton memoryOption = (RadioButton) view;
         if (memoryOption.getId() == R.id.internal_memory_radiobutton) {
@@ -130,14 +171,17 @@ public class InfoSlidePagerActivity extends FragmentActivity {
                             DeviceOptionsHandler.ByteToGB(DeviceOptionsHandler
                                     .checkAvailableEmbeddedExternalMemory(this))),
                     Toast.LENGTH_LONG).show();
-        } else if (memoryOption.getId() == R.id.external_memory_radiobutton) {
+        } else if (memoryOption.getId() == R.id.removable_memory_radiobutton) {
             Toast.makeText(
                     this,
-                    String.format(getString(R.string.free_external_memory),
+                    String.format(getString(R.string.free_removable_memory),
                             DeviceOptionsHandler.ByteToGB(DeviceOptionsHandler
                                     .checkAvailableExternalMemory(this))),
                     Toast.LENGTH_LONG).show();
         }
+        // enable sync button as a bonus!
+        Button sync = (Button) findViewById(R.id.sync_button);
+        sync.setEnabled(true);
     }
 
     public void exit(View view) {
@@ -145,7 +189,7 @@ public class InfoSlidePagerActivity extends FragmentActivity {
     }
 
     /**
-     * A simple pager adapter that represents 5 ScreenSlidePageFragment objects,
+     * A simple pager adapter that represents 7 ScreenSlidePageFragment objects,
      * in sequence.
      */
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
@@ -175,27 +219,15 @@ public class InfoSlidePagerActivity extends FragmentActivity {
             if (fragments.size() >= position) {
                 current = fragments.get(position);
             }
-            // I wish I could find a better way to do this!
+            // I wish I could find a better way to update 1st fragment!
             if (position == 0
                     && pager.getCurrentItem() == 0
                     && Settings.getBoolean(getApplicationContext(),
                             InternalDatabaseKeys.SHOW_SLIDE_HAND, true)) {
                 showHandGesture();
             }
-            else if (pager.getCurrentItem() == 5) {
-                // hide or show the intro info
-                CheckBox hideInfo = (CheckBox) findViewById(R.id.hide_info_checkBox);
-                hideInfo.setChecked(Settings.getBoolean(getApplicationContext(),
-                        InternalDatabaseKeys.HIDE_INTRO_INFO, false));
-                hideInfo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-
-                    @Override
-                    public void onCheckedChanged(CompoundButton buttonView,
-                            boolean hideInfo) {
-                        Settings.setBoolean(getApplicationContext(),
-                                InternalDatabaseKeys.HIDE_INTRO_INFO, hideInfo);
-                    }
-                });
+            else {
+                updateFragment(pager.getCurrentItem());
             }
 
             return current;

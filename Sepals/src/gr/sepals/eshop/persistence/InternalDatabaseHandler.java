@@ -5,14 +5,14 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class InternalDatabaseHelper extends SQLiteOpenHelper {
+public class InternalDatabaseHandler extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "sepals_data";
     public static final String TABLE_SETTINGS = "settings";
     private static final String TABLE_PERSONAL_DATA = "personal_data";
     private static final int DB_VERSION = 1;
 
-    public InternalDatabaseHelper(Context ctx) {
+    public InternalDatabaseHandler(Context ctx) {
         super(ctx, DB_NAME, null, DB_VERSION);
     }
 
