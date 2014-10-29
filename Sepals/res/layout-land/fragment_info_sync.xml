@@ -30,12 +30,12 @@
         android:layout_marginTop="@dimen/custom_actionbar_bottom_margin" >
 
         <TextView
-            android:id="@+id/intro_sync_description_textview"
-            style="@style/IntroFont.Description"
+            android:id="@+id/info_sync_description_textview"
+            style="@style/IntroFont"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
-            android:text="@string/intro_sync_description" />
+            android:text="@string/info_sync_description" />
     </ScrollView>
 
     <RadioGroup

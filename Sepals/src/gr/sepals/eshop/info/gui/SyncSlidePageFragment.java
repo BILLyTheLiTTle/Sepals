@@ -7,6 +7,7 @@ import gr.sepals.eshop.persistence.InternalDatabasePredefinedValues;
 import gr.sepals.eshop.util.db.Settings;
 import gr.sepals.eshop.util.device.DeviceOptionsHandler;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
@@ -24,19 +26,31 @@ public class SyncSlidePageFragment extends Fragment implements OnClickListener {
     private RadioGroup memoryOption;
     private RadioButton internal, embedded, removable;
     private Button sync, exit;
+    private TextView title, desc;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
                 R.layout.fragment_info_sync, container, false);
+        if (getResources().getBoolean(R.bool.isTablet)){
+            title = (TextView) rootView.findViewById(R.id.info_sync_title_textview);
+            Typeface titleFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/GFS_Pyrsos.otf");
+            title.setTypeface(titleFont, Typeface.BOLD);
+        }
+        desc = (TextView) rootView.findViewById(R.id.info_sync_description_textview);
+        Typeface descFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/GFS_Goschen-Italic.otf");
+        desc.setTypeface(descFont);
 
         memoryOption = (RadioGroup) rootView.findViewById(R.id.memory_radioGroup);
         internal = (RadioButton) rootView.findViewById(R.id.internal_memory_radiobutton);
+        internal.setTypeface(descFont);
         internal.setOnClickListener(this);
         embedded = (RadioButton) rootView.findViewById(R.id.embedded_memory_radiobutton);
+        embedded.setTypeface(descFont);
         embedded.setOnClickListener(this);
         removable = (RadioButton) rootView.findViewById(R.id.removable_memory_radiobutton);
+        removable.setTypeface(descFont);
         removable.setOnClickListener(this);
 
         sync = (Button) rootView.findViewById(R.id.sync_button);

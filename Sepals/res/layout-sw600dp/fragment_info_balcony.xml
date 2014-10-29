@@ -24,7 +24,7 @@
 
     <TextView
         android:id="@+id/info_balcony_title_textview"
-        style="@style/IntroFont.Title"
+        style="@style/IntroFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/custom_actionbar_bottom_margin"
@@ -32,8 +32,8 @@
         android:text="@string/info_balcony_title" />
 
     <TextView
-        android:id="@+id/info_order_description_textview"
-        style="@style/IntroFont.Description"
+        android:id="@+id/info_balcony_description_textview"
+        style="@style/IntroFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/title_description_margin"
