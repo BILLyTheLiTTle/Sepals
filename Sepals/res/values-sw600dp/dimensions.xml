@@ -2,6 +2,7 @@
 <resources>
    <dimen name="circle_size">30dp</dimen>
    <dimen name="circle_gap">50dp</dimen>
+   <dimen name="circle_stroke">5dp</dimen>
    <dimen name="hand_start_X">480dp</dimen>
    <dimen name="hand_start_Y">500dp</dimen>
    <dimen name="hand_end_X">90dp</dimen>
@@ -12,5 +13,7 @@
    <dimen name="custom_actionbar_divisor_height">4dp</dimen>
    <dimen name="custom_actionbar_bottom_margin">20dp</dimen>
    <dimen name="title_description_margin">10dp</dimen>
+   
+   <dimen name="promo__products_top_margin">180dp</dimen>
    
 </resources>

@@ -40,6 +40,16 @@
         android:layout_below="@+id/info_products_title_textview"
         android:text="@string/info_products_description" />
 
+    <ImageView
+        android:id="@+id/promo_products_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_products_description_textview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/promo__products_top_margin"
+        android:adjustViewBounds="true"
+        android:src="@drawable/screen_products" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

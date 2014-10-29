@@ -7,7 +7,7 @@
         android:color="#C0C0C0" />
 
     <stroke
-        android:width="3dp"
+        android:width="@dimen/circle_stroke"
         android:color="#666666" />
 
 </shape>

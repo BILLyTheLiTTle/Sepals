@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/info_products_description_textview"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/promo__products_top_margin"
         android:adjustViewBounds="true"
         android:src="@drawable/screen_products" />
 
