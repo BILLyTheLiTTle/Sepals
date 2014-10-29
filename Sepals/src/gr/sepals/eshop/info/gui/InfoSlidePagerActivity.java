@@ -74,14 +74,14 @@ public class InfoSlidePagerActivity extends FragmentActivity {
         final float endX = getResources().getDimension(R.dimen.hand_end_X);
         final float endY = getResources().getDimension(R.dimen.hand_end_Y);
         Display display = getWindowManager().getDefaultDisplay();
-        ConfigOptions co = new ShowcaseView.ConfigOptions();
-        co.hideOnClickOutside = true;
+        //ConfigOptions co = new ShowcaseView.ConfigOptions();
+        //co.hideOnClickOutside = true;
         Point size = new Point();
         display.getSize(size);
         int width = size.x;
         int height = size.y;
         ShowcaseView sv = ShowcaseView.insertShowcaseView(width, height, this,
-                R.string.slide_left_title, R.string.slide_left_description, co);
+                R.string.slide_left_title, R.string.slide_left_description, null);//, co);
         sv.setScaleMultiplier(0);
         sv.animateGesture(startX, startY, endX, endY, true);
         sv.setOnShowcaseEventListener(new OnShowcaseEventListener() {
