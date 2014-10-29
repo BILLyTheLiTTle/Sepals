@@ -11,8 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/custom_actionbar_icon_left_margin"
         android:adjustViewBounds="true"
-        android:maxWidth="@dimen/custom_actionbar_icon_width"
         android:maxHeight="@dimen/custom_actionbar_icon_height"
+        android:maxWidth="@dimen/custom_actionbar_icon_width"
         android:src="@drawable/logo" />
 
     <View
@@ -27,8 +27,8 @@
         style="@style/IntroFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/custom_actionbar_bottom_margin"
         android:layout_below="@+id/logo_actionbar_imageview"
+        android:layout_marginTop="@dimen/custom_actionbar_bottom_margin"
         android:text="@string/info_products_title" />
 
     <TextView
@@ -36,10 +36,20 @@
         style="@style/IntroFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/title_description_margin"
         android:layout_alignLeft="@+id/info_products_title_textview"
         android:layout_below="@+id/info_products_title_textview"
+        android:layout_marginTop="@dimen/title_description_margin"
         android:text="@string/info_products_description" />
+
+    <ImageView
+        android:id="@+id/promo_products_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/info_products_description_textview"
+        android:layout_marginTop="180dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/screen_products" />
 
     <LinearLayout
         android:layout_width="wrap_content"
