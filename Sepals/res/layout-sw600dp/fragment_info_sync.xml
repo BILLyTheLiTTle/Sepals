@@ -23,20 +23,20 @@
         android:background="@color/purple_actionbar_divisor" />
 
     <TextView
-        android:id="@+id/intro_sync_title_textview"
+        android:id="@+id/info_sync_title_textview"
         style="@style/IntroFont.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/logo_actionbar_imageview"
         android:layout_marginTop="@dimen/custom_actionbar_bottom_margin"
-        android:text="@string/intro_sync_title" />
+        android:text="@string/info_sync_title" />
 
     <TextView
         android:id="@+id/intro_sync_description_textview"
         style="@style/IntroFont.Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/intro_sync_title_textview"
+        android:layout_below="@+id/info_sync_title_textview"
         android:layout_marginTop="@dimen/title_description_margin"
         android:text="@string/intro_sync_description" />
 

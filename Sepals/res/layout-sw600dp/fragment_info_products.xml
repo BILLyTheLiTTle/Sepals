@@ -23,23 +23,23 @@
         android:background="@color/purple_actionbar_divisor" />
 
     <TextView
-        android:id="@+id/intro_products_title_textview"
+        android:id="@+id/info_products_title_textview"
         style="@style/IntroFont.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/custom_actionbar_bottom_margin"
         android:layout_below="@+id/logo_actionbar_imageview"
-        android:text="@string/intro_products_title" />
+        android:text="@string/info_products_title" />
 
     <TextView
-        android:id="@+id/intro_products_description_textview"
+        android:id="@+id/info_products_description_textview"
         style="@style/IntroFont.Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/title_description_margin"
-        android:layout_alignLeft="@+id/intro_products_title_textview"
-        android:layout_below="@+id/intro_products_title_textview"
-        android:text="@string/intro_products_description" />
+        android:layout_alignLeft="@+id/info_products_title_textview"
+        android:layout_below="@+id/info_products_title_textview"
+        android:text="@string/info_products_description" />
 
     <LinearLayout
         android:layout_width="wrap_content"
