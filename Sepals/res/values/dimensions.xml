@@ -15,7 +15,7 @@
    <dimen name="custom_actionbar_divisor_height">2dp</dimen>
    <dimen name="custom_actionbar_bottom_margin">10dp</dimen>
    
-   <dimen name="promo__products_top_margin">50dp</dimen>
+   <dimen name="promo_products_top_margin">60dp</dimen>
    
    <dimen name="hide_info_checkbox_bottom_margin">40dp</dimen>
    <dimen name="memory_radiogroup_bottom_margin">60dp</dimen>

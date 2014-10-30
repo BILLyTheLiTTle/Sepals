@@ -6,7 +6,7 @@
    <dimen name="hand_end_X">220dp</dimen>
    <dimen name="hand_end_Y">100dp</dimen>
    
-   <dimen name="promo__products_top_margin">3dp</dimen>
+   <dimen name="promo_products_top_margin">3dp</dimen>
    
    <dimen name="hide_info_checkbox_bottom_margin">30dp</dimen>
    <dimen name="sync_text_height">80dp</dimen>
