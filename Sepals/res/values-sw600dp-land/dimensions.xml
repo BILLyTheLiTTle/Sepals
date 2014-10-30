@@ -23,5 +23,6 @@
    <dimen name="hand_end_Y">300dp</dimen>
    
    <dimen name="promo_products_top_margin">10dp</dimen>
+   <dimen name="promo_network_top_margin">10dp</dimen>
    
 </resources>
