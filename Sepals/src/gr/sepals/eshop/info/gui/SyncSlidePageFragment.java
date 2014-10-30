@@ -12,6 +12,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Sepals.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gr.sepals.eshop.info.gui;
 
 import gr.sepals.eshop.R;
@@ -46,13 +47,15 @@ public class SyncSlidePageFragment extends Fragment implements OnClickListener {
             Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
                 R.layout.fragment_info_sync, container, false);
-        if (getResources().getBoolean(R.bool.isTablet)){
+        if (getResources().getBoolean(R.bool.isTablet)) {
             title = (TextView) rootView.findViewById(R.id.info_sync_title_textview);
-            Typeface titleFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/GFS_Pyrsos.otf");
+            Typeface titleFont = Typeface.createFromAsset(getActivity().getAssets(),
+                    "fonts/GFS_Pyrsos.otf");
             title.setTypeface(titleFont, Typeface.BOLD);
         }
         desc = (TextView) rootView.findViewById(R.id.info_sync_description_textview);
-        Typeface descFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/GFS_Goschen-Italic.otf");
+        Typeface descFont = Typeface.createFromAsset(getActivity().getAssets(),
+                "fonts/GFS_Goschen-Italic.otf");
         desc.setTypeface(descFont);
 
         memoryOption = (RadioGroup) rootView.findViewById(R.id.memory_radioGroup);
@@ -63,8 +66,14 @@ public class SyncSlidePageFragment extends Fragment implements OnClickListener {
         embedded.setTypeface(descFont);
         embedded.setOnClickListener(this);
         removable = (RadioButton) rootView.findViewById(R.id.removable_memory_radiobutton);
-        removable.setTypeface(descFont);
-        removable.setOnClickListener(this);
+        //check if there is sdcard port at device
+        if (DeviceOptionsHandler.checkAvailableExternalMemory(getActivity()) == -1) {
+            memoryOption.removeView(removable);
+        }
+        else {
+            removable.setTypeface(descFont);
+            removable.setOnClickListener(this);
+        }
 
         sync = (Button) rootView.findViewById(R.id.sync_button);
         sync.setOnClickListener(this);
@@ -98,7 +107,7 @@ public class SyncSlidePageFragment extends Fragment implements OnClickListener {
     @Override
     public void onClick(View v) {
         if (v == sync) {
-            //start syncing
+            // start syncing
         }
         else if (v == exit) {
             getActivity().finish();

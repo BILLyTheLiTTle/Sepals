@@ -33,6 +33,9 @@ public class DeviceOptionsHandler {
 
     public static long checkAvailableExternalMemory(Context ctx) {
         String pathToTarget = System.getenv("SECONDARY_STORAGE");
+        if(pathToTarget == null){
+            return -1;
+        }
         String[] str_array = pathToTarget.split(":");
         String stringa = str_array[0];
         return new File(stringa).getUsableSpace();
