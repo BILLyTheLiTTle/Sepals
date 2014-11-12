@@ -24,5 +24,6 @@
    
    <dimen name="promo_products_top_margin">10dp</dimen>
    <dimen name="promo_network_top_margin">10dp</dimen>
+   <dimen name="promo_order_top_margin">10dp</dimen>
    
 </resources>

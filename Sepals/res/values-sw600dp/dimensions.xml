@@ -33,5 +33,6 @@
    
    <dimen name="promo_products_top_margin">180dp</dimen>
    <dimen name="promo_network_top_margin">150dp</dimen>
+   <dimen name="promo_order_top_margin">150dp</dimen>
    
 </resources>
